@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Poppins } from 'next/font/google'
 
 import "./globals.css";
+import { THEME_STORAGE_KEY } from "@/constants/themes";
 
 const poppins = Poppins({
     subsets: ['latin'],
@@ -20,7 +21,14 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        <script
+          dangerouslySetInnerHTML={{
+            __html: `try{var t=localStorage.getItem("${THEME_STORAGE_KEY}");if(t)document.documentElement.dataset.theme=t}catch(e){}`,
+          }}
+        />
+      </head>
       <body
         className={`${poppins.variable} font-poppins antialiased`}
       >

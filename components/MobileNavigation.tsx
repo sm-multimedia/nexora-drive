@@ -7,6 +7,8 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 import Image from "next/image";
+import Logo from "@/components/Logo";
+import ThemeSwitcher from "@/components/ThemeSwitcher";
 import React, { useState } from "react";
 import { usePathname } from "next/navigation";
 import { Separator } from "@radix-ui/react-separator";
@@ -37,14 +39,10 @@ const MobileNavigation = ({
 
   return (
     <header className="mobile-header">
-      <Image
-        src="/assets/icons/logo-full-brand.svg"
-        alt="logo"
-        width={120}
-        height={52}
-        className="h-auto"
-      />
+      <Logo className="w-[120px]" />
 
+      <div className="flex items-center gap-3">
+      <ThemeSwitcher />
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
           <Image
@@ -119,6 +117,7 @@ const MobileNavigation = ({
           </div>
         </SheetContent>
       </Sheet>
+      </div>
     </header>
   );
 };

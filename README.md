@@ -17,6 +17,7 @@ A modern file storage and sharing app built with Next.js and Appwrite.
 - **File actions**: rename, view details, share with other users by email, download and delete.
 - **Storage dashboard**: usage chart and per-category totals against a 2 GB quota.
 - **Responsive UI**: desktop sidebar and mobile navigation drawer.
+- **Switchable themes**: Classic Coral (original), Ocean Blue, Emerald Green and Royal Violet. Pick one with the colour dots in the header; your choice is saved in the browser. Add or tweak themes in [`constants/themes.ts`](./constants/themes.ts) and the `[data-theme]` blocks in `app/globals.css`.
 
 ## Tech Stack
 

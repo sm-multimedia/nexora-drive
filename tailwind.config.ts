@@ -11,8 +11,8 @@ const config: Config = {
   	extend: {
   		colors: {
   			brand: {
-  				'100': '#EA6365',
-  				DEFAULT: '#FA7275'
+  				'100': 'rgb(var(--brand-100) / <alpha-value>)',
+  				DEFAULT: 'rgb(var(--brand) / <alpha-value>)'
   			},
   			red: '#FF7474',
   			error: '#b80000',
@@ -23,8 +23,8 @@ const config: Config = {
   			light: {
   				'100': '#333F4E',
   				'200': '#A3B2C7',
-  				'300': '#F2F5F9',
-  				'400': '#F2F4F8'
+  				'300': 'rgb(var(--light-300) / <alpha-value>)',
+  				'400': 'rgb(var(--light-400) / <alpha-value>)'
   			},
   			dark: {
   				'100': '#04050C',
